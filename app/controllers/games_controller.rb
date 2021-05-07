@@ -24,3 +24,5 @@ class GamesController < ApplicationController
     render json: {message: response}
   end
 end
+
+
