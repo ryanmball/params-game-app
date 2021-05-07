@@ -15,22 +15,22 @@ class GamesController < ApplicationController
     number = 36
     user_guess = params[:user_guess].to_i
     if user_guess > number
-      response = "Too high! Guess again."
+      output_message = "Too high! Guess again."
     elsif user_guess < number
-      response = "Too low! Guess again."
+      output_message = "Too low! Guess again."
     elsif user_guess == number
-      response = "That is correct! The number is #{number}."
+      output_message = "That is correct! The number is #{number}."
     end
-    render json: {message: response}
+    render json: {message: output_message}
   end
 
   def credentials
     if params[:username].downcase == "hugh" && params[:password].downcase == "swordfish"
-      response = "Valid credentials."
+      output_message = "Valid credentials."
     else
-      response = "Invalid credentials."
+      output_message = "Invalid credentials."
     end
-    render json: {message: response}
+    render json: {message: output_message}
   end
 end
 

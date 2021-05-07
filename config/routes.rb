@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   #Will still run without having a value in the URL
   get "user_name" => "games#user_name"
 
-  get "number_guesser" => "games#number_guesser"
+  get "query_number_guesser" => "games#number_guesser"
 
 
 
