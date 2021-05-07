@@ -23,6 +23,15 @@ class GamesController < ApplicationController
     end
     render json: {message: response}
   end
+
+  def credentials
+    if params[:username].downcase == "hugh" && params[:password].downcase == "swordfish"
+      response = "Valid credentials."
+    else
+      response = "Invalid credentials."
+    end
+    render json: {message: response}
+  end
 end
 
 
